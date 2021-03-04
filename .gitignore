@@ -1,0 +1,5 @@
+build
+.vscode/*.json
+!.vscode/launch.json
+Deployment/*
+!Deployment/keepme
