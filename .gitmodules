@@ -1,3 +1,0 @@
-[submodule "Libraries/stb"]
-	path = Libraries/stb
-	url = https://github.com/nothings/stb.git
