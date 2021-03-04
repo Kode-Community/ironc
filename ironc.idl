@@ -1,0 +1,23 @@
+callback VoidFunc = void();
+
+interface Trait_t {
+    DOMString name;
+    [Ref] attribute Object_t object;
+    attribute ObservableArray<VoidFunc> _add;
+    attribute ObservableArray<VoidFunc> _init;
+    attribute ObservableArray<VoidFunc> _remove;
+    attribute ObservableArray<VoidFunc> _update;
+    attribute ObservableArray<VoidFunc> _lateUpdate;
+}
+
+[Class,ExcludeName]
+interface Trait {
+    Trait_t create_trait(DOMString name);
+    void notifyOnAdd(Trait_t trait,VoidFunc callback);
+    void notifyOnInit(Trait_t trait,VoidFunc callback);
+    void notifyOnRemove(Trait_t trait,VoidFunc callback);
+    void notifyOnUpdate(Trait_t trait,VoidFunc callback);
+    void removeOnUpdate(Trait_t trait,VoidFunc callback);
+    void notifyOnLateUpdate(Trait_t trait,VoidFunc callback);
+    void removeOnLateUpdate(Trait_t trait,VoidFunc callback);
+}
