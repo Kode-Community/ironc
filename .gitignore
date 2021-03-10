@@ -1,5 +1,6 @@
 build
 .vscode/*.json
 !.vscode/launch.json
+!.vscode/tasks.json
 Deployment/*
 !Deployment/keepme

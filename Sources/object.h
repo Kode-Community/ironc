@@ -5,7 +5,7 @@
 typedef struct object {
     /*
     * Array of Traits.
-    * Cast me maybe to trait_t
+    * Cast me maybe to trait_t*
     */
     void* traits;
     //int value;

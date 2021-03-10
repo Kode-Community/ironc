@@ -6,7 +6,7 @@
             "request": "launch",
             "program": "d:\\repos\\ironc\\Deployment\\ironc.exe",
             "cwd": "d:\\repos\\ironc\\Deployment",
-            "preLaunchTask": "Kinc: Build for Windows",
+            "preLaunchTask": "Build debug Windows",
             "externalConsole": true,
             "logging": {
                 "moduleLoad": false,
