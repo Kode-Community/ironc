@@ -3,16 +3,9 @@
 
 #include "kinc/log.h" 
 
-trait_t* create_trait(const char* name){
-    trait_t* t = malloc(sizeof(trait_t));
-    #ifdef DBG
-    if(t == NULL){
-        kinc_log(KINC_LOG_LEVEL_ERROR,"Couldn't create the Trait.");
-    }
-    #endif
-    t->name = malloc(sizeof(char) * strlen(name));
+void init_trait(trait_t* t,object_t* o,const char* name){
     memcpy(t->name,name,strlen(name));
-    //t->object = NULL;
+    t->object = o;
     t->_add = NULL;
     t->_init = NULL;
     t->_remove = NULL;

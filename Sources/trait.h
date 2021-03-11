@@ -24,10 +24,12 @@ typedef struct trait {
 } trait_t;
 
 /**
- * Creates and adds the trait to the object
- * name: name of the Trait
+ * Initializes the trait to the object
+ * @param t The trait to initialize
+ * @param o The object we will set on the Trait
+ * @param name name of the Trait
 **/
-KINC_FUNC trait_t* create_trait(const char* name);
+KINC_FUNC void init_trait(trait_t* t,object_t* o,const char* name);
 /**
  * Add a function to be called when we add the Trait to an Object.
  * This can happen at anytime.

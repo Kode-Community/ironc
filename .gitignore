@@ -4,3 +4,4 @@ build
 !.vscode/tasks.json
 Deployment/*
 !Deployment/keepme
+*.hx

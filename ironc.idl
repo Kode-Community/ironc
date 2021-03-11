@@ -12,7 +12,7 @@ interface Trait_t {
 
 [Class,ExcludeName]
 interface Trait {
-    Trait_t create_trait(DOMString name);
+    void init_trait(Trait_t trait,Object_t object,DOMString name);
     void notifyOnAdd(Trait_t trait,VoidFunc callback);
     void notifyOnInit(Trait_t trait,VoidFunc callback);
     void notifyOnRemove(Trait_t trait,VoidFunc callback);
