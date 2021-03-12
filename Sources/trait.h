@@ -4,13 +4,15 @@
 #include "object.h"
 // #include <kinc/graphics4/graphics.h>
 
+struct object_t;
+
 FUNC_DEF(void, VoidFunc, void);
 typedef struct trait {
     char* name;
     /**
 	  Object this trait belongs to.
 	**/
-    object_t* object;
+    struct object_t* object;
 
     VoidFunc** _add;
     VoidFunc** _init;
@@ -29,7 +31,7 @@ typedef struct trait {
  * @param o The object we will set on the Trait
  * @param name name of the Trait
 **/
-KINC_FUNC void init_trait(trait_t* t,object_t* o,const char* name);
+KINC_FUNC void init_trait(trait_t* t,struct object_t* o,const char* name);
 /**
  * Add a function to be called when we add the Trait to an Object.
  * This can happen at anytime.

@@ -13,7 +13,6 @@ void init_trait(trait_t* t,object_t* o,const char* name){
     t->_lateUpdate = NULL;
     //t->_render= NULL;
     //t->_render2D = NULL;
-    return t;
 }
 void notifyOnAdd(trait_t* t, void (*value)(void)){
     arrpush(t->_add,value);

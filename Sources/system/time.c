@@ -1,4 +1,6 @@
 #include "time.h"
+
+#include "scheduler.h"
 #include "kinc/display.h"
 
 int frequency = -1;
@@ -18,6 +20,14 @@ double get_step(void){
     return 1/frequency;
 }
 
+double time_time(void){
+    #ifdef DBG
+    if(singleton_scheduler == NULL){
+        kinc_log(KINC_LOG_LEVEL_ERROR,"The scheduler isn't initialised. Call scheduler_init before using time.");
+    }
+    #endif
+    scheduler_time(singleton_scheduler);
+}
 void time_update(void){
     realDelta = time_realTime() - time_last;
     time_last = time_realTime();

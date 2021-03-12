@@ -1,8 +1,6 @@
 #pragma once
 
 #include "../pch.h"
-#include "scheduler.h"
-#include "kinc/display.h"
 
 extern int frequency;
 extern double time_last;
@@ -13,14 +11,7 @@ double get_delta();
 
 KINC_FUNC extern double realDelta;
 
-KINC_FUNC inline double time_time(void){
-    #ifdef DBG
-    if(singleton_scheduler == NULL){
-        kinc_log(KINC_LOG_LEVEL_ERROR,"The scheduler isnt initialised. Call scheduler_init before using time.");
-    }
-    #endif
-    scheduler_time(singleton_scheduler);
-}
+KINC_FUNC double time_time(void);
 
 KINC_FUNC inline double time_realTime(void){
     return scheduler_realTime();
