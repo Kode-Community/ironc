@@ -76,3 +76,7 @@ void vec4_lerp(vec4_t* self,vec4_t* from,vec4_t* to,float s){
 float vec4_length(vec4_t* self){
     return kinc_sqrt(self->x * self->x + self->y * self->y + self->z * self->z);
 }
+
+float vec4_distanceTo(vec4_t* self,vec4_t* p){
+    return kinc_sqrt((p->x - self->x) * (p->x - self->x) + (p->y - self->y) * (p->y - self->y) + (p->z - self->z) * (p->z - self->z));
+}

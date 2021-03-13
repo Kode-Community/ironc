@@ -28,6 +28,11 @@ double time_time(void){
     #endif
     scheduler_time(singleton_scheduler);
 }
+
+double time_realTime(void){
+    return scheduler_realTime();
+}
+
 void time_update(void){
     realDelta = time_realTime() - time_last;
     time_last = time_realTime();

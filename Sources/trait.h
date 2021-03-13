@@ -1,7 +1,6 @@
 #pragma once
 
 #include "pch.h"
-#include "object.h"
 // #include <kinc/graphics4/graphics.h>
 
 struct object_t;

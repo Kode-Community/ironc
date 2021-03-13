@@ -13,8 +13,6 @@ KINC_FUNC extern double realDelta;
 
 KINC_FUNC double time_time(void);
 
-KINC_FUNC inline double time_realTime(void){
-    return scheduler_realTime();
-}
+KINC_FUNC double time_realTime(void);
 
 KINC_FUNC void time_update(void);

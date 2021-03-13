@@ -1,6 +1,7 @@
 #include "trait.h"
-#include <string.h>
+#include "object/object.h"
 
+#include <string.h>
 #include "kinc/log.h" 
 
 void init_trait(trait_t* t,object_t* o,const char* name){

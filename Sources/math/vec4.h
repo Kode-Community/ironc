@@ -21,3 +21,4 @@ KINC_FUNC float vec4_dot(vec4_t* self, vec4_t* v);
 KINC_FUNC void vec4_clone(vec4_t* from,vec4_t* to);
 KINC_FUNC void vec4_lerp(vec4_t* self,vec4_t* from,vec4_t* to,float s);
 KINC_FUNC float vec4_length(vec4_t* self);
+KINC_FUNC float vec4_distanceTo(vec4_t* self,vec4_t* p);
